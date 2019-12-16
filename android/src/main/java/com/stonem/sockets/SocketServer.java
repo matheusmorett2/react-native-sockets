@@ -130,7 +130,9 @@ public class SocketServer {
         @Override
         public void run() {
             try {
-                serverSocket = new ServerSocket(socketServerPORT);
+                serverSocket = new ServerSocket();
+                serverSocket.setReuseAddress(true);
+                serverSocket.bind(new InetSocketAddress(socketServerPORT)); // can bind with reuse= true
 
                 isOpen = true;
                 WritableMap eventParams = Arguments.createMap();
