@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReadableMap;
 
 import android.util.Log;
 import android.os.AsyncTask;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.SparseArray;
 
 import java.io.IOException;
